@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patas & Pelos - O pet shop premium com banho, tosa, clínica veterinária e hotelaria de excelência para o seu melhor amigo.">
+    <title>Patas & Pelos | Pet Shop & Estética Premium</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="nav-logo">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+                    <path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" fill="currentColor"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 8.24 6.62 5.09 10.14 4.29C9.4 5.92 9 7.71 9 9.61C9 13.96 12.19 17.56 16.3 18.23C15.17 19.34 13.67 20 12 20Z" fill="currentColor" opacity="0.4"/>
+                    <path d="M6.5 9C7.32843 9 8 8.32843 8 7.5C8 6.67157 7.32843 6 6.5 6C5.67157 6 5 6.67157 5 7.5C5 8.32843 5.67157 9 6.5 9Z" fill="currentColor"/>
+                    <path d="M17.5 9C18.3284 9 19 8.32843 19 7.5C19 6.67157 18.3284 6 17.5 6C16.6716 6 16 6.67157 16 7.5C16 8.32843 16.6716 9 17.5 9Z" fill="currentColor"/>
+                    <path d="M9.5 5C10.3284 5 11 4.32843 11 3.5C11 2.67157 10.3284 2 9.5 2C8.67157 2 8 2.67157 8 3.5C8 4.32843 8.67157 5 9.5 5Z" fill="currentColor"/>
+                    <path d="M14.5 5C15.3284 5 16 4.32843 16 3.5C16 2.67157 15.3284 2 14.5 2C13.6716 2 13 2.67157 13 3.5C13 4.32843 13.6716 5 14.5 5Z" fill="currentColor"/>
+                </svg>
+                <span class="logo-text">Patas & Pelos</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#calculadora" class="nav-link">Simulador</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Alternar Tema">
+                    <span class="theme-toggle-icon">☀️</span>
+                </button>
+                <a href="#calculadora" class="btn btn-primary btn-sm" id="btn-header-cta">Agendar Agora</a>
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-promo">
+                    <span class="badge-icon">✨</span>
+                    <span>Novo: Spa de Hidratação de Coco & Argan</span>
+                </div>
+                <h1 class="hero-title">O cuidado premium que o seu melhor amigo merece.</h1>
+                <p class="hero-subtitle">Oferecemos banho e tosa especializados, atendimento veterinário humanizado e hotelaria com monitoramento 24h para garantir a felicidade e o bem-estar do seu pet.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#calculadora" class="btn btn-primary btn-lg" id="hero-cta-primary">Simular Agendamento</a>
+                    <a href="#servicos" class="btn btn-secondary btn-lg" id="hero-cta-secondary">Nossos Serviços</a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="avatars">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" alt="Cliente 1" class="avatar-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Cliente 2" class="avatar-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80" alt="Cliente 3" class="avatar-img">
+                    </div>
+                    <div class="trust-text">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>+2.500 pets cuidados com carinho este ano</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-media">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Golden Retriever feliz" class="hero-main-img">
+                    <div class="floating-card floating-card-1">
+                        <div class="icon-circle">🛁</div>
+                        <div>
+                            <h4>Banho & Hidratação</h4>
+                            <p>Cheirosinho e relaxado</p>
+                        </div>
+                    </div>
+                    <div class="floating-card floating-card-2">
+                        <div class="icon-circle">🩺</div>
+                        <div>
+                            <h4>Check-up Vet</h4>
+                            <p>Saúde 100% em dia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-bar">
+        <div class="container stats-container">
+            <div class="stat-item reveal delay-100">
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Anos de dedicação</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal delay-200">
+                <span class="stat-number" data-target="10">0</span><span class="stat-suffix">k+</span>
+                <span class="stat-label">Banhos & Tosas realizados</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal delay-300">
+                <span class="stat-number" data-target="4.9">0</span>
+                <span class="stat-label">Avaliação média Google</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal delay-400">
+                <span class="stat-number" data-target="12">0</span>
+                <span class="stat-label">Veterinários parceiros</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits / Why Us -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nossos Valores</span>
+                <h2 class="section-title">Por que escolher a Patas & Pelos?</h2>
+                <p class="section-description">Acreditamos que cada pet é um membro único da família e merece um tratamento exclusivo e carinhoso.</p>
+            </div>
+            
+            <div class="grid-benefits">
+                <div class="benefit-card reveal delay-100">
+                    <div class="benefit-icon">💖</div>
+                    <h3>Amor e Cuidado Real</h3>
+                    <p>Nossa equipe é formada por profissionais apaixonados por animais. Seu pet se sentirá em casa.</p>
+                </div>
+                <div class="benefit-card reveal delay-200">
+                    <div class="benefit-icon">📹</div>
+                    <h3>Câmeras ao Vivo</h3>
+                    <p>Monitore o banho, a tosa ou a estadia do seu pet direto do nosso aplicativo em tempo real.</p>
+                    <button type="button" class="btn btn-secondary btn-sm btn-benefit-cta" id="btn-open-cameras" style="margin-top: 16px; width: 100%;">Acessar Câmeras 📹</button>
+                </div>
+                <div class="benefit-card reveal delay-300">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Cosméticos Naturais</h3>
+                    <p>Usamos apenas shampoos hipoalergênicos e condicionadores veganos, livres de parabenos.</p>
+                </div>
+                <div class="benefit-card reveal delay-400">
+                    <div class="benefit-icon">🚨</div>
+                    <h3>Clínica Integrada 24h</h3>
+                    <p>Suporte médico veterinário completo a qualquer hora para total tranquilidade e segurança.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nossos Serviços</span>
+                <h2 class="section-title">Soluções completas para seu pet</h2>
+                <p class="section-description">De cuidados estéticos essenciais a cuidados veterinários de alta complexidade.</p>
+            </div>
+
+            <div class="grid-services">
+                <!-- Service 1 -->
+                <div class="service-card reveal delay-100">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Cão tomando banho" class="service-img">
+                        <span class="service-price-tag">A partir de R$ 60</span>
+                    </div>
+                    <div class="service-info">
+                        <h3>Banho & Tosa Estética</h3>
+                        <p>Banhos relaxantes com água morna purificada, secagem silenciosa, tosa higiênica ou na tesoura e corte de unhas.</p>
+                        <ul class="service-features">
+                            <li>💧 Água ozonizada</li>
+                            <li>🤫 Soprador de baixo ruído</li>
+                            <li>✂️ Tosas específicas da raça</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card reveal delay-200">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=80" alt="Veterinária examinando cão" class="service-img">
+                        <span class="service-price-tag">A partir de R$ 120</span>
+                    </div>
+                    <div class="service-info">
+                        <h3>Consultas & Vacinas</h3>
+                        <p>Clínica geral com foco no bem-estar preventivo. Vacinação importada, exames laboratoriais e orientação nutricional.</p>
+                        <ul class="service-features">
+                            <li>💉 Vacinas V10 e Antirrábica</li>
+                            <li>📋 Exames rápidos no local</li>
+                            <li>🍉 Orientação alimentar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card reveal delay-300">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80" alt="Cães brincando no quintal" class="service-img">
+                        <span class="service-price-tag">A partir de R$ 90/dia</span>
+                    </div>
+                    <div class="service-info">
+                        <h3>Hotel & Creche (Daycare)</h3>
+                        <p>Espaço amplo e livre de gaiolas para diversão, socialização e descanso seguro, com atividades enriquecedoras supervisionadas.</p>
+                        <ul class="service-features">
+                            <li>🌳 Quintal gramado gigante</li>
+                            <li>🛌 Quartos individuais climatizados</li>
+                            <li>📷 Atualizações via WhatsApp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Price Calculator Section -->
+    <section class="calculator-section" id="calculadora">
+        <div class="container calculator-container">
+            <div class="calc-text">
+                <span class="section-tag tag-light">Simulador Online</span>
+                <h2 class="section-title">Monte o pacote ideal e estime o valor</h2>
+                <p>Selecione o tipo do seu pet, o porte e os serviços desejados para calcular uma estimativa na hora. Se gostar, envie o agendamento diretamente!</p>
+                
+                <div class="calculator-highlights">
+                    <div class="calc-highlight-item">
+                        <span class="chk-icon">✓</span>
+                        <p>Sem taxas ocultas ou surpresas</p>
+                    </div>
+                    <div class="calc-highlight-item">
+                        <span class="chk-icon">✓</span>
+                        <p>Desconto de 10% no primeiro agendamento</p>
+                    </div>
+                    <div class="calc-highlight-item">
+                        <span class="chk-icon">✓</span>
+                        <p>Confirmação rápida por WhatsApp ou E-mail</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-card">
+                <form id="booking-form">
+                    <!-- Step 1: Pet Type -->
+                    <div class="form-group">
+                        <label class="form-label">1. Qual é o seu pet?</label>
+                        <div class="radio-tile-group">
+                            <label class="radio-tile-label">
+                                <input type="radio" name="pet-type" value="dog" checked class="radio-tile-input">
+                                <span class="radio-tile">
+                                    <span class="radio-tile-icon">🐶</span>
+                                    <span class="radio-tile-text">Cão</span>
+                                </span>
+                            </label>
+                            <label class="radio-tile-label">
+                                <input type="radio" name="pet-type" value="cat" class="radio-tile-input">
+                                <span class="radio-tile">
+                                    <span class="radio-tile-icon">🐱</span>
+                                    <span class="radio-tile-text">Gato</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Pet Size -->
+                    <div class="form-group">
+                        <label class="form-label">2. Qual o porte dele?</label>
+                        <div class="size-selector">
+                            <label class="size-option">
+                                <input type="radio" name="pet-size" value="small" checked class="size-input">
+                                <span class="size-box">Pequeno <small>(Até 10kg)</small></span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="pet-size" value="medium" class="size-input">
+                                <span class="size-box">Médio <small>(10kg - 25kg)</small></span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="pet-size" value="large" class="size-input">
+                                <span class="size-box">Grande <small>(Mais de 25kg)</small></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Select Services -->
+                    <div class="form-group">
+                        <label class="form-label">3. Escolha os serviços:</label>
+                        <div class="services-checkbox-list">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="calc-service" value="banho" checked class="checkbox-input">
+                                <span class="checkbox-control"></span>
+                                <span class="checkbox-label-text">Banho Relaxante <span class="price-val" id="p-banho">+R$ 60</span></span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="calc-service" value="tosa" class="checkbox-input">
+                                <span class="checkbox-control"></span>
+                                <span class="checkbox-label-text">Tosa Higiênica/Máquina <span class="price-val" id="p-tosa">+R$ 30</span></span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="calc-service" value="hidra" class="checkbox-input">
+                                <span class="checkbox-control"></span>
+                                <span class="checkbox-label-text">Hidratação de Coco & Argan <span class="price-val" id="p-hidra">+R$ 25</span></span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="calc-service" value="unha" class="checkbox-input">
+                                <span class="checkbox-control"></span>
+                                <span class="checkbox-label-text">Corte & Lixamento de Unhas <span class="price-val" id="p-unha">+R$ 15</span></span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="calc-service" value="consulta" class="checkbox-input">
+                                <span class="checkbox-control"></span>
+                                <span class="checkbox-label-text">Consulta Veterinária Preventiva <span class="price-val" id="p-consulta">+R$ 120</span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Frequency -->
+                    <div class="form-group">
+                        <label class="form-label">4. Frequência do serviço:</label>
+                        <div class="frequency-selector">
+                            <label class="freq-option">
+                                <input type="radio" name="service-freq" value="once" checked class="freq-input">
+                                <span class="freq-box">Único <small>(Preço regular)</small></span>
+                            </label>
+                            <label class="freq-option">
+                                <input type="radio" name="service-freq" value="weekly" class="freq-input">
+                                <span class="freq-box">Semanal <small>(10% OFF)</small></span>
+                            </label>
+                            <label class="freq-option">
+                                <input type="radio" name="service-freq" value="fortnightly" class="freq-input">
+                                <span class="freq-box">Quinzenal <small>(5% OFF)</small></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Promo Coupon -->
+                    <div class="form-group">
+                        <label class="form-label">5. Possui cupom de desconto?</label>
+                        <div class="coupon-input-wrapper">
+                            <input type="text" id="coupon-code" placeholder="Digite o cupom (ex: PRIMEIRO10)" class="form-input coupon-input">
+                            <button type="button" id="btn-apply-coupon" class="btn btn-secondary btn-sm">Aplicar</button>
+                        </div>
+                        <span id="coupon-feedback" class="coupon-feedback"></span>
+                    </div>
+
+                    <hr class="calc-divider">
+
+                    <!-- Detailed Price Breakdown -->
+                    <div class="price-breakdown" id="price-breakdown" style="display: none; margin-bottom: 20px;">
+                        <div class="breakdown-row">
+                            <span>Subtotal:</span>
+                            <span id="val-subtotal">R$ 0,00</span>
+                        </div>
+                        <div class="breakdown-row" id="row-discount-freq" style="display: none;">
+                            <span>Desconto Frequência:</span>
+                            <span id="val-discount-freq" style="color: var(--success);">-R$ 0,00</span>
+                        </div>
+                        <div class="breakdown-row" id="row-discount-coupon" style="display: none;">
+                            <span>Desconto Cupom:</span>
+                            <span id="val-discount-coupon" style="color: var(--success);">-R$ 0,00</span>
+                        </div>
+                    </div>
+
+                    <!-- Live Total Display -->
+                    <div class="price-display-wrapper">
+                        <span class="price-display-label">Valor Estimado:</span>
+                        <div class="price-display-amount">
+                            <span class="currency">R$</span>
+                            <span class="value" id="calc-total">60</span>
+                        </div>
+                    </div>
+
+                    <!-- Booking Details -->
+                    <div class="booking-fields">
+                        <div class="form-row">
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Nome do tutor" required class="form-input" id="tut-name">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Telefone / WhatsApp" required class="form-input" id="tut-phone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-wrapper">
+                                <input type="date" required class="form-input" id="tut-date">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Nome do pet" required class="form-input" id="pet-name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit-booking">Enviar Agendamento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Clientes Felizes</span>
+                <h2 class="section-title">O que dizem os pais de pet</h2>
+                <p class="section-description">Histórias reais de quem confia a felicidade de seus amiguinhos a nós.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-zoom delay-100">
+                    <div class="t-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="t-text">"O Pipoca detestava tomar banho em outros pet shops, sempre ficava tremendo. Na Patas &amp; Pelos ele entra abanando o rabo! O banho ozonizado realmente acalmou a coceira dele na pele. Recomendo demais!"</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&h=100&q=80" alt="Mariana Silva" class="t-avatar">
+                        <div>
+                            <h4>Mariana Silva</h4>
+                            <p>Tutor do Pipoca (Golden Retriever)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal-zoom delay-200">
+                    <div class="t-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="t-text">"Utilizei a hospedagem por 5 dias durante uma viagem de trabalho. Recebi fotos e vídeos duas vezes por dia no WhatsApp. Fiquei muito tranquila vendo o Simba super livre brincando com outros gatos."</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100&q=80" alt="Carlos Eduardo" class="t-avatar">
+                        <div>
+                            <h4>Carlos Eduardo</h4>
+                            <p>Tutor do Simba (Persa)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal-zoom delay-300">
+                    <div class="t-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="t-text">"Excelente atendimento veterinário. Doutor Ricardo foi extremamente atencioso ao diagnosticar a otite da Melzinha. O preço é super justo pela qualidade das instalações e do cuidado humano."</p>
+                    <div class="t-author">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Fernanda Oliveira" class="t-avatar">
+                        <div>
+                            <h4>Fernanda Oliveira</h4>
+                            <p>Tutora da Mel (Shih Tzu)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Dúvidas Frequentes</span>
+                <h2 class="section-title">Perguntas Comuns</h2>
+                <p class="section-description">Esclarecemos as principais dúvidas sobre nossos serviços, hotelaria e cuidados preventivos.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item reveal delay-100">
+                    <button class="faq-question">
+                        <span>Quais vacinas meu pet precisa para a hospedagem?</span>
+                        <span class="faq-icon">＋</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para a segurança de todos os hóspedes, exigimos que as vacinas V10/V8 (para cães), Quádrupla Felina (para gatos), Antirrábica e de Gripe estejam em dia. Também é obrigatório estar com a vermifugação e antipulgas aplicados nos últimos 30 dias.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal delay-200">
+                    <button class="faq-question">
+                        <span>Como funciona o monitoramento por câmeras?</span>
+                        <span class="faq-icon">＋</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nosso sistema conta com câmeras de alta definição nos principais ambientes. Ao hospedar seu pet ou deixá-lo para banho e tosa, você recebe um link de acesso ou pode visualizar as imagens direto da nossa página ou aplicativo, de forma 100% gratuita.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal delay-300">
+                    <button class="faq-question">
+                        <span>Preciso levar a ração e pertences do meu pet para o hotel?</span>
+                        <span class="faq-icon">＋</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos fortemente trazer a ração habitual do seu pet para evitar problemas intestinais por mudança repentina de dieta. Brinquedos, caminha e paninhos com o cheiro da casa também são super bem-vindos para ajudá-lo a se adaptar!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal delay-400">
+                    <button class="faq-question">
+                        <span>Qual é o diferencial do banho ozonizado?</span>
+                        <span class="faq-icon">＋</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O banho com água ozonizada possui propriedades bactericidas, fungicidas e cicatrizantes. Ele limpa profundamente a pele do pet, ajuda a tratar coceiras e dermatites, acelera cicatrizações e deixa a pelagem muito mais macia e sedosa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal delay-500">
+                    <button class="faq-question">
+                        <span>Qual a política de cancelamento ou reagendamento?</span>
+                        <span class="faq-icon">＋</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode reagendar ou cancelar qualquer banho ou consulta gratuitamente com até 24h de antecedência. Para a hotelaria em períodos de alta temporada, solicitamos aviso prévio de 5 dias úteis para reembolso do sinal de reserva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section class="contact-section" id="contato">
+        <div class="container contact-container">
+            <div class="contact-info-panel">
+                <span class="section-tag">Fale Conosco</span>
+                <h2 class="section-title">Onde nos encontrar?</h2>
+                <p>Venha nos visitar ou tire suas dúvidas online! Estamos prontos para atender você e seu pet com todo amor do mundo.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <span class="contact-detail-icon">📍</span>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. das Nações Unidas, 1250 - Pinheiros, São Paulo - SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="contact-detail-icon">📞</span>
+                        <div>
+                            <h4>Telefone / WhatsApp</h4>
+                            <p>(11) 99876-5432 / (11) 3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="contact-detail-icon">✉️</span>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@patasepelos.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="contact-detail-icon">🕒</span>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sábado: 08:00 às 20:00<br>Domingos e Feriados: 09:00 às 16:00 (Clínica 24h)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Mock / Contact Form -->
+            <div class="contact-interactive-panel">
+                <div class="map-container">
+                    <!-- Elegant SVG Map Placeholder that looks premium -->
+                    <div class="map-placeholder">
+                        <div class="map-marker-pulse"></div>
+                        <div class="map-marker">📍</div>
+                        <span class="map-address-overlay">Patas & Pelos - Pinheiros</span>
+                    </div>
+                </div>
+                <div class="form-container-box">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contact-form">
+                        <div class="form-group-direct">
+                            <input type="text" placeholder="Seu nome completo" required class="contact-input">
+                        </div>
+                        <div class="form-group-direct">
+                            <input type="email" placeholder="Seu melhor e-mail" required class="contact-input">
+                        </div>
+                        <div class="form-group-direct">
+                            <textarea placeholder="Como podemos ajudar você e seu amiguinho?" rows="4" required class="contact-textarea"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-block">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+                        <path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" fill="currentColor"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 8.24 6.62 5.09 10.14 4.29C9.4 5.92 9 7.71 9 9.61C9 13.96 12.19 17.56 16.3 18.23C15.17 19.34 13.67 20 12 20Z" fill="currentColor" opacity="0.4"/>
+                        <path d="M6.5 9C7.32843 9 8 8.32843 8 7.5C8 6.67157 7.32843 6 6.5 6C5.67157 6 5 6.67157 5 7.5C5 8.32843 5.67157 9 6.5 9Z" fill="currentColor"/>
+                        <path d="M17.5 9C18.3284 9 19 8.32843 19 7.5C19 6.67157 18.3284 6 17.5 6C16.6716 6 16 6.67157 16 7.5C16 8.32843 16.6716 9 17.5 9Z" fill="currentColor"/>
+                    </svg>
+                    <span class="logo-text">Patas & Pelos</span>
+                </a>
+                <p class="footer-desc">Cuidado compassivo, estética premium e hotelaria divertida. O bem-estar do seu animal de estimação em primeiro lugar.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+                    <a href="#" class="social-icon" aria-label="Facebook">👥</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">🎥</a>
+                    <a href="#" class="social-icon" aria-label="TikTok">🎵</a>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Navegação</h4>
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#calculadora">Simulador</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Serviços</h4>
+                <a href="#servicos">Banho & Tosa</a>
+                <a href="#servicos">Consultas Clínicas</a>
+                <a href="#servicos">Hotelaria Canina/Felina</a>
+                <a href="#servicos">Spa & Bem-estar</a>
+                <a href="#servicos">Daycare Recreativo</a>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Suporte & Info</h4>
+                <a href="#">Políticas de Cancelamento</a>
+                <a href="#">Termos de Hospedagem</a>
+                <a href="#">Dúvidas Frequentes (FAQ)</a>
+                <a href="#">Blog do Pet</a>
+                <a href="#">Trabalhe Conosco</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Patas & Pelos Ltda. Todos os direitos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Políticas de Privacidade</a>
+                    <span>•</span>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-card">
+            <div class="modal-icon">🎉</div>
+            <h3>Agendamento Pré-Registrado!</h3>
+            <p>Obrigado, <strong id="modal-tut-name">Tutor</strong>! Recebemos a sua simulação de agendamento para o <strong id="modal-pet-name">Pet</strong> no dia <strong id="modal-date">00/00</strong>.</p>
+            <div class="modal-summary-box" style="background-color: var(--primary-light); padding: 16px; border-radius: var(--radius-md); margin: 20px 0; text-align: left; font-size: 0.95rem; color: var(--text-primary);">
+                <p style="margin-bottom: 8px;"><strong>📅 Frequência:</strong> <span id="modal-summary-freq">Único</span></p>
+                <p style="margin-bottom: 0;"><strong>💰 Valor Estimado:</strong> <span id="modal-summary-total">R$ 0,00</span></p>
+            </div>
+            <p>Nossa equipe entrará em contato via WhatsApp no número <strong id="modal-phone">(00) 00000-0000</strong> em até 30 minutos para confirmar o horário e tirar dúvidas.</p>
+            <button class="btn btn-primary btn-block" id="btn-close-modal">Legal, entendi!</button>
+        </div>
+    </div>
+
+    <!-- Live Cam Modal -->
+    <div class="modal-overlay" id="live-cam-modal">
+        <div class="modal-card modal-card-lg">
+            <button class="modal-close" id="btn-close-live-cam" aria-label="Fechar">&times;</button>
+            <div class="live-cam-layout">
+                <!-- Sidebar selection -->
+                <div class="live-cam-sidebar">
+                    <h3>Câmeras 📹</h3>
+                    <button class="btn-cam-select active" data-cam="recreacao">
+                        <span class="cam-dot"></span> Recreação
+                    </button>
+                    <button class="btn-cam-select" data-cam="banho">
+                        <span class="cam-dot"></span> Banho & Estética
+                    </button>
+                    <button class="btn-cam-select" data-cam="hotel">
+                        <span class="cam-dot"></span> Suítes do Hotel
+                    </button>
+                </div>
+                <!-- Feed Screen -->
+                <div class="live-cam-feed-container">
+                    <div class="cctv-header">
+                        <div class="cctv-title" id="cctv-title">🔴 REC-01 [SALÃO DE RECREAÇÃO]</div>
+                        <div class="cctv-time" id="cctv-clock">16/06/2026 23:35:00</div>
+                    </div>
+                    <div class="cctv-overlay-indicator">
+                        <span class="rec-icon"></span> GRAVANDO
+                    </div>
+                    <div class="live-cam-feed" id="live-cam-feed">
+                        <div class="scanlines"></div>
+                        <div class="cctv-grid"></div>
+                        <div class="cctv-lens-zoom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>

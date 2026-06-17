@@ -1,0 +1,183 @@
+/* ==========================================================================
+   CSS ANIMATIONS - PET SHOP "PATAS & PELOS"
+   ========================================================================== */
+
+/* 1. Keyframe Animations */
+
+/* Morphing animation for Hero Pet Image */
+@keyframes morphingPet {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+/* Floating cards on Hero Section */
+@keyframes floatCard {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* CCTV Live Camera Panning */
+@keyframes cctvPan1 {
+    0% { background-position: 10% 50%; background-size: 130%; }
+    100% { background-position: 90% 50%; background-size: 130%; }
+}
+@keyframes cctvPan2 {
+    0% { background-position: 50% 10%; background-size: 130%; }
+    100% { background-position: 50% 90%; background-size: 130%; }
+}
+@keyframes cctvPan3 {
+    0% { background-position: 50% 50%; background-size: 110%; }
+    100% { background-position: 55% 55%; background-size: 120%; }
+}
+
+/* Pulse animation for active indicators */
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* Toast entrance */
+@keyframes toastIn {
+    0% {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Toast progress bar reduction */
+@keyframes toastProgress {
+    to { width: 0%; }
+}
+
+/* Smooth reveal animations for landing page content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
+
+/* 2. Utility Animation Classes */
+
+.animate-morph {
+    animation: morphingPet 15s ease-in-out infinite alternate;
+}
+
+.animate-float-1 {
+    animation: floatCard 4s ease-in-out infinite alternate;
+}
+
+.animate-float-2 {
+    animation: floatCard 4s ease-in-out infinite alternate;
+    animation-delay: 2s;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-pulse {
+    animation: pulse 1s infinite alternate;
+}
+
+.glow-btn-active {
+    animation: pulseGlow 2s infinite;
+}
+
+/* Hover transition variables */
+.hover-scale {
+    transition: var(--transition-smooth);
+}
+.hover-scale:hover {
+    transform: scale(1.03) translateY(-2px);
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+/* Variants for different directions */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-36px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(36px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-zoom {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.reveal-active,
+.reveal-left.reveal-active,
+.reveal-right.reveal-active,
+.reveal-zoom.reveal-active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
