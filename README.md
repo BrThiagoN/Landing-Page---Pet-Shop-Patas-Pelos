@@ -1,40 +1,144 @@
-# 🐾 Landing Page - Pet Shop "Patas & Pelos"
+# 🐾 Patas & Pelos — Pet Shop & Estética Premium
 
-Esta é uma landing page moderna, responsiva e de alta performance criada para o pet shop premium **Patas & Pelos**. Ela foi projetada com foco em estética visual sofisticada, micro-animações suaves e elementos altamente interativos.
+[![GitHub](https://img.shields.io/badge/github-BrThiagoN/Landing--Page---Pet--Shop--Patas--Pelos-6366F1?style=flat-square&logo=github)](https://github.com/BrThiagoN/Landing-Page---Pet-Shop-Patas-Pelos)
+[![License](https://img.shields.io/badge/license-MIT-10B981?style=flat-square)](LICENSE)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](index.html)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](styles.css)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](script.js)
 
-## 📂 Estrutura de Arquivos
+Landing page moderna, responsiva e interativa para o pet shop premium **Patas & Pelos**. Construída com HTML5, CSS3 e JavaScript puro — sem dependências externas, sem frameworks. Basta abrir no navegador.
 
-O projeto é 100% autossuficiente e roda diretamente no navegador sem necessidade de servidores locais (basta dar um clique duplo em `index.html`).
+---
 
-- **`index.html`**: Contém a estrutura semântica HTML5 da página, SVGs integrados e referências externas de alta qualidade para imagens do Unsplash e fontes do Google.
-- **`styles.css`**: Define o sistema de design visual (variáveis de cores, tipografia, espaçamento, sombras, responsividade e animações dinâmicas).
-- **`script.js`**: Implementa a inteligência interativa (calculador de preços dinâmico por tipo e porte do pet, menu móvel responsivo, contadores de estatísticas em tempo real com Intersection Observer e interceptação de formulários com modal de sucesso).
+## 📋 Tabela de Conteúdo
 
-## ✨ Principais Funcionalidades
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias](#-tecnologias)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Como Usar](#-como-usar)
+- [Galeria](#-galeria)
+- [Roadmap](#-roadmap)
+- [Licença](#-licença)
 
-1. **Simulador Online & Calculadora de Preços**:
-   - Atualiza o valor estimado instantaneamente conforme o usuário altera o tipo de animal (🐶 Cão ou 🐱 Gato), o porte (Pequeno, Médio, Grande) e adiciona os serviços.
-   - Faz a transição dos valores com animações de contagem no JS.
-2. **Contadores de Estatísticas Animados**:
-   - Os números da barra de estatísticas começam a contar apenas quando a seção entra na tela do usuário (*IntersectionObserver*).
-3. **Menu de Navegação Inteligente**:
-   - Menu hambúrguer animado no mobile.
-   - Efeito sticky com desfoque de fundo (glassmorphism) ao rolar a página.
-   - Destaque ativo dinâmico na navegação conforme o usuário rola pelas seções (*Scrollspy*).
-4. **Modal de Sucesso Integrado**:
-   - Ao enviar o agendamento simulado, exibe um modal amigável com os dados preenchidos e a instrução dos próximos passos.
+---
 
-## 🎨 Sistema de Design & Cores
+## ✨ Funcionalidades
 
-* **Tipografia**: *Outfit* para títulos (moderno e amigável) e *Plus Jakarta Sans* para o corpo de texto (legível e limpo).
-* **Paleta de Cores**:
-  * Fundo Warm Cream: `#FAF8F5` (Sensação aconchegante e limpa)
-  * Destaque Indigo/Roxo: `#6366F1` (Tranquilidade e sofisticação)
-  * Destaque Rosa: `#EC4899` (Amor e cuidado)
-  * Tons de Destaque Âmbar/Dourado: `#F59E0B` (Calor, sol e energia)
+### 🧮 Simulador de Preços Interativo
+Calculadora em tempo real que ajusta o valor conforme:
+- **Tipo do pet**: Cão ou Gato
+- **Porte**: Pequeno, Médio ou Grande
+- **Serviços**: Banho, Tosa, Hidratação, Corte de Unhas, Consulta
+- **Frequência**: Único, Semanal (10% OFF) ou Quinzenal (5% OFF)
+- **Cupom de desconto**: `PRIMEIRO10` (10%) e `PETLOVE15` (15%)
+- Exibe **detalhamento completo** com subtotal, descontos e valor final com animação de contagem
 
-## 🚀 Como Visualizar a Landing Page
+### 🌙 Modo Claro / Escuro
+Alternância com persistência em `localStorage` e detecção de preferência do sistema (`prefers-color-scheme`).
 
-1. Navegue até a pasta `Documents/petshop` no seu computador.
-2. Dê um clique duplo no arquivo `index.html`.
-3. A página abrirá no seu navegador padrão carregando todas as imagens e estilos automaticamente!
+### 📱 Menu Responsivo
+- Menu hambúrguer animado no mobile
+- Header com efeito **sticky** e **glassmorphism** ao scroll
+- Scrollspy ativo — destaca automaticamente a seção visível
+
+### 📊 Contadores Animados (IntersectionObserver)
+Os números de estatísticas (anos, banhos, avaliação) disparam ao entrar na viewport — animação suave em ~60fps.
+
+### 🎥 Modal de Câmeras ao Vivo (CCTV)
+Simulação de monitoramento com:
+- Feed com efeito **scanline**, borda CRT e overlay de CCTV
+- Relógio em tempo real
+- Alternância entre câmeras (Recreação, Estética, Hotel)
+- Efeito **pan** animado no background
+
+### ❓ FAQ com Accordion
+Perguntas frequentes expansíveis com animação suave de altura.
+
+### 🎉 Modal de Sucesso
+Ao enviar o agendamento, exibe um modal com resumo dos dados preenchidos.
+
+### 📬 Sistema de Toast Notifications
+Notificações temporárias com barra de progresso para feedback de ações.
+
+### 🎞️ Scroll Reveal
+Elementos aparecem com animação ao entrar na viewport (fade, slide lateral e zoom).
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Uso |
+|---|---|
+| **HTML5** | Estrutura semântica, SVG inline, meta tags |
+| **CSS3** | Variáveis, Grid, Flexbox, animações keyframe, glassmorphism, media queries |
+| **JavaScript (ES6+)** | DOM API, IntersectionObserver, localStorage, manipulação de eventos |
+| **Google Fonts** | Outfit (títulos) + Plus Jakarta Sans (corpo) |
+| **Unsplash** | Imagens de alta qualidade |
+
+Zero dependências — sem jQuery, sem React, sem build tools.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+Landing-Page---Pet-Shop-Patas-Pelos/
+├── index.html              # Estrutura HTML5 principal
+├── styles.css              # Sistema de design e estilos (2200+ linhas)
+├── script.js               # Lógica interativa (540 linhas)
+├── css/
+│   └── animations.css      # Animações keyframe modulares
+└── README.md
+```
+
+---
+
+## 🚀 Como Usar
+
+```bash
+git clone https://github.com/BrThiagoN/Landing-Page---Pet-Shop-Patas-Pelos.git
+cd Landing-Page---Pet-Shop-Patas-Pelos
+start index.html
+```
+
+Ou simplesmente arraste o `index.html` para o navegador.
+
+> Nenhum servidor, build ou instalação necessária — o projeto é 100% estático.
+
+---
+
+## 🖼️ Galeria
+
+| Hero | Calculadora | CCTV |
+|---|---|---|
+| Header com glassmorphism, imagem morphed e cards flutuantes | Simulador com radio tiles, checkboxes e preço em tempo real | Modal de monitoramento com scanlines e relógio |
+
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="Preview" width="600">
+</p>
+
+---
+
+## 🧭 Roadmap
+
+- [x] Calculadora de preços interativa
+- [x] Modo escuro com persistência
+- [x] Menu responsivo com scrollspy
+- [x] Modal de câmeras ao vivo
+- [x] FAQ accordion
+- [x] Animações scroll reveal
+- [ ] Integração com formulário real (email/API)
+- [ ] Páginas internas (blog, equipe)
+- [ ] Testes automatizados
+
+---
+
+## 📄 Licença
+
+Distribuído sob a licença **MIT**. Consulte o arquivo `LICENSE` para mais informações.
+
+---
+
+<p align="center">
+  Feito por <a href="https://github.com/BrThiagoN">BrThiagoN</a>
+</p>
