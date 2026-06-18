@@ -171,4 +171,61 @@ describe('🐾 Testes de Integração da Landing Page', function() {
             expect(liveFeed.getAttribute('data-cam-bg')).to.equal('hotel');
         });
     });
+
+    describe('❓ Sanidade e Funcionamento do FAQ Accordion', function() {
+        it('Deve abrir um item do FAQ e fechar os outros ao clicar', function() {
+            const questions = iframeDoc.querySelectorAll('.faq-question');
+            if (questions.length < 2) return;
+
+            // Click the first question
+            questions[0].click();
+            expect(questions[0].parentElement.classList.contains('active')).to.be.true;
+
+            // Click the second question, first one should close, second one should open
+            questions[1].click();
+            expect(questions[0].parentElement.classList.contains('active')).to.be.false;
+            expect(questions[1].parentElement.classList.contains('active')).to.be.true;
+        });
+    });
+
+    describe('📬 Sistema de Toast Notifications', function() {
+        it('Deve instanciar um container de toasts e adicionar o toast na tela', function() {
+            iframeWin.showToast('Testando notificação', 'success');
+            
+            const toastContainer = iframeDoc.getElementById('toast-container');
+            expect(toastContainer).to.not.be.null;
+            
+            const toast = toastContainer.querySelector('.toast-success');
+            expect(toast).to.not.be.null;
+            expect(toast.textContent).to.contain('Testando notificação');
+        });
+    });
+
+    describe('📋 Fluxo de Agendamento (Booking Form e Modal de Sucesso)', function() {
+        it('Deve preencher os dados do formulário, enviar e exibir o modal com os dados corretos', function() {
+            const banhoCheckbox = iframeDoc.querySelector('input[name="calc-service"][value="banho"]');
+            banhoCheckbox.click(); // R$ 60
+
+            iframeDoc.getElementById('tut-name').value = 'John Doe';
+            iframeDoc.getElementById('pet-name').value = 'Rex';
+            iframeDoc.getElementById('tut-phone').value = '(11) 99999-9999';
+            iframeDoc.getElementById('tut-date').value = '2026-06-30';
+
+            const form = iframeDoc.getElementById('booking-form');
+            form.dispatchEvent(new iframeWin.Event('submit'));
+
+            const successModal = iframeDoc.getElementById('success-modal');
+            expect(successModal.classList.contains('open')).to.be.true;
+
+            expect(iframeDoc.getElementById('modal-tut-name').textContent).to.equal('John Doe');
+            expect(iframeDoc.getElementById('modal-pet-name').textContent).to.equal('Rex');
+            expect(iframeDoc.getElementById('modal-phone').textContent).to.equal('(11) 99999-9999');
+            expect(iframeDoc.getElementById('modal-date').textContent).to.equal('30/06/2026');
+            expect(iframeDoc.getElementById('modal-summary-total').textContent).to.equal('R$ 60,00');
+
+            const closeBtn = iframeDoc.getElementById('btn-close-modal');
+            closeBtn.click();
+            expect(successModal.classList.contains('open')).to.be.false;
+        });
+    });
 });
