@@ -2,9 +2,9 @@
 
   # 🐾 Patas & Pelos — Pet Shop & Estética Premium
 
-  ### 🌐 [CLIQUE AQUI PARA ACESSAR A APLICAÇÃO AO VIVO](https://landing-page-pet-shop-patas-pelos.vercel.app/)
+  ### 🌐 <a href="https://landing-page-pet-shop-patas-pelos.vercel.app/" target="_blank">CLIQUE AQUI PARA ACESSAR A APLICAÇÃO AO VIVO</a>
 
-  [![Website](https://img.shields.io/badge/Acesse%20o%20Site-CLIQUE%20AQUI-success?style=for-the-badge&logo=vercel&logoColor=white&color=6366F1)](https://landing-page-pet-shop-patas-pelos.vercel.app/)
+  <a href="https://landing-page-pet-shop-patas-pelos.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Acesse%20o%20Site-CLIQUE%20AQUI-success?style=for-the-badge&logo=vercel&logoColor=white&color=6366F1" alt="Website"></a>
 
   [![GitHub](https://img.shields.io/badge/github-repo-6366F1?style=flat-square&logo=github)](https://github.com/BrThiagoN/Landing-Page---Pet-Shop-Patas-Pelos)
   [![License](https://img.shields.io/badge/license-MIT-10B981?style=flat-square)](LICENSE)
