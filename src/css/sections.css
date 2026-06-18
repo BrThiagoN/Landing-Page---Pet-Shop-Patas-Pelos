@@ -540,6 +540,118 @@
     color: rgba(255, 255, 255, 0.85);
 }
 
+/* ==========================================================================
+   INTERACTIVE CALCULATOR COLUMN WIDGETS
+   ========================================================================== */
+.promo-box-wrapper {
+    margin-top: 36px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.promo-box-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.promo-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.promo-card-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    transition: var(--transition-smooth);
+}
+
+.promo-card-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(99, 102, 241, 0.35);
+    transform: translateY(-2px);
+}
+
+.promo-badge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.promo-code {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(245, 158, 11, 0.12);
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.promo-discount {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--success);
+    background: rgba(16, 185, 129, 0.12);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.promo-desc {
+    font-size: 0.8rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    line-height: 1.45 !important;
+    margin-bottom: 0 !important;
+    max-width: 100% !important;
+}
+
+.calc-info-alert {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+}
+
+.info-alert-icon {
+    font-size: 1.25rem;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.info-alert-text {
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Responsive adjustments for calculator columns */
+@media (max-width: 576px) {
+    .promo-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
 .calc-card {
     background-color: var(--bg-card-dark);
     border-radius: var(--radius-lg);
