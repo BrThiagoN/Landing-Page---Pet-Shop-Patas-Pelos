@@ -7,17 +7,18 @@ export function initReveal() {
     );
     
     if (revealElements.length > 0 && 'IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('reveal-active');
-                    observer.unobserve(entry.target);
+                } else {
+                    entry.target.classList.remove('reveal-active');
                 }
             });
         }, {
             root: null,
-            threshold: 0.12,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.10,
+            rootMargin: '0px 0px -20px 0px'
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
