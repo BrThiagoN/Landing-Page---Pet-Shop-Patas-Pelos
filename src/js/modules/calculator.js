@@ -67,8 +67,40 @@ export function initCalculator() {
 
         // Compute coupon discount
         let couponDiscountRate = 0;
-        if (appliedCoupon && couponCodes[appliedCoupon] !== undefined) {
-            couponDiscountRate = couponCodes[appliedCoupon];
+        if (appliedCoupon) {
+            let isCouponValid = true;
+            let couponErrorMessage = '';
+
+            if (appliedCoupon === 'PRIMEIRO10') {
+                // PRIMEIRO10 requires at least 'banho' or 'tosa'
+                const hasRequiredService = selectedServices.includes('banho') || selectedServices.includes('tosa');
+                if (!hasRequiredService) {
+                    isCouponValid = false;
+                    couponErrorMessage = 'O cupom PRIMEIRO10 requer serviço de Banho ou Tosa.';
+                }
+            } else if (appliedCoupon === 'PETLOVE15') {
+                // PETLOVE15 requires subtotal value >= R$ 150
+                if (afterFreqDiscount < 150) {
+                    isCouponValid = false;
+                    couponErrorMessage = 'O cupom PETLOVE15 exige valor mínimo de R$ 150,00.';
+                }
+            }
+
+            if (!isCouponValid) {
+                appliedCoupon = null;
+                const couponFeedback = document.getElementById('coupon-feedback');
+                const couponCodeInput = document.getElementById('coupon-code');
+                if (couponFeedback) {
+                    couponFeedback.textContent = couponErrorMessage;
+                    couponFeedback.className = 'coupon-feedback error';
+                }
+                if (couponCodeInput) {
+                    couponCodeInput.value = '';
+                }
+                if (window.showToast) window.showToast(couponErrorMessage, 'error');
+            } else {
+                couponDiscountRate = couponCodes[appliedCoupon];
+            }
         }
         let couponDiscountVal = Math.round(afterFreqDiscount * couponDiscountRate);
         let totalSum = afterFreqDiscount - couponDiscountVal;
@@ -152,10 +184,13 @@ export function initCalculator() {
 
                 if (couponCodes[enteredCode] !== undefined) {
                     appliedCoupon = enteredCode;
-                    couponFeedback.textContent = `Cupom "${enteredCode}" aplicado! (${couponCodes[enteredCode] * 100}% de desconto)`;
-                    couponFeedback.className = 'coupon-feedback success';
-                    if (window.showToast) window.showToast(`Cupom "${enteredCode}" aplicado com sucesso!`, 'success');
                     calculateTotal();
+                    
+                    if (appliedCoupon === enteredCode) {
+                        couponFeedback.textContent = `Cupom "${enteredCode}" aplicado! (${couponCodes[enteredCode] * 100}% de desconto)`;
+                        couponFeedback.className = 'coupon-feedback success';
+                        if (window.showToast) window.showToast(`Cupom "${enteredCode}" aplicado com sucesso!`, 'success');
+                    }
                 } else {
                     appliedCoupon = null;
                     couponFeedback.textContent = 'Cupom inválido.';

@@ -148,6 +148,23 @@ npx live-server
 
 ---
 
+## 🧪 Testes de Integração
+
+O projeto conta com uma suíte de testes de integração robusta desenvolvida em **Mocha & Chai** que roda diretamente no navegador, sem necessidade de dependências ou build complexos.
+
+### Como rodar os testes:
+1. Inicialize o seu servidor estático local (ex: `python3 -m http.server 8000`).
+2. Acesse a URL da suíte de testes: `http://localhost:8000/tests/index.html`
+3. Os testes serão executados imediatamente em um ambiente isolado (Sandbox Iframe). É possível ver a simulação visual clicando no botão **"Visualizar App no Iframe"** no painel de testes.
+
+#### Cobertura dos Testes:
+- **🧮 Simulador de Preços:** Valida soma correta, alteração por tipo/porte de pet e descontos de frequência.
+- **🏷️ Cupons de Desconto:** Testa as regras de negócio restritivas de `PRIMEIRO10` (necessidade de Banho/Tosa) e `PETLOVE15` (mínimo de R$ 150).
+- **🌙 Temas:** Valida o chaveamento dinâmico de Light/Dark Mode no documento.
+- **🎥 CCTV:** Testa o mapeamento de backgrounds no simulador de câmeras.
+
+---
+
 ## 🖼️ Galeria
 
 | Hero | Calculadora | CCTV |
@@ -169,9 +186,9 @@ npx live-server
 - [x] FAQ accordion
 - [x] Animações scroll reveal
 - [x] Arquitetura modular Frontend de Alta Manutenibilidade (Senior Refactor)
+- [x] Testes automatizados e de integração via Sandbox no Navegador
 - [ ] Integração com formulário real (email/API)
 - [ ] Páginas internas (blog, equipe)
-- [ ] Testes automatizados
 
 ---
 
