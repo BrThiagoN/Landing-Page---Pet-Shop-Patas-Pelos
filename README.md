@@ -1,12 +1,19 @@
-# 🐾 Patas & Pelos — Pet Shop & Estética Premium
+<div align="center">
 
-[![GitHub](https://img.shields.io/badge/github-BrThiagoN/Landing--Page---Pet--Shop--Patas--Pelos-6366F1?style=flat-square&logo=github)](https://github.com/BrThiagoN/Landing-Page---Pet-Shop-Patas-Pelos)
-[![Website](https://img.shields.io/badge/demo-live-success?style=flat-square&logo=browser)](https://landing-page-pet-shop-patas-pelos.vercel.app/)
-[![License](https://img.shields.io/badge/license-MIT-10B981?style=flat-square)](LICENSE)
+  # 🐾 Patas & Pelos — Pet Shop & Estética Premium
+
+  ### 🌐 [CLIQUE AQUI PARA ACESSAR A APLICAÇÃO AO VIVO](https://landing-page-pet-shop-patas-pelos.vercel.app/)
+
+  [![Website](https://img.shields.io/badge/Acesse%20o%20Site-CLIQUE%20AQUI-success?style=for-the-badge&logo=vercel&logoColor=white&color=6366F1)](https://landing-page-pet-shop-patas-pelos.vercel.app/)
+
+  [![GitHub](https://img.shields.io/badge/github-repo-6366F1?style=flat-square&logo=github)](https://github.com/BrThiagoN/Landing-Page---Pet-Shop-Patas-Pelos)
+  [![License](https://img.shields.io/badge/license-MIT-10B981?style=flat-square)](LICENSE)
+
+</div>
+
+---
 
 Landing page moderna, responsiva e interativa para o pet shop premium **Patas & Pelos**. Construída com HTML5, CSS3 modular e JavaScript ES6+ purificado — sem dependências externas complexas, mas estruturada para alta performance e escalabilidade.
-
-🔗 **Link do Site Oficial:** [https://landing-page-pet-shop-patas-pelos.vercel.app/](https://landing-page-pet-shop-patas-pelos.vercel.app/)
 
 ---
 
