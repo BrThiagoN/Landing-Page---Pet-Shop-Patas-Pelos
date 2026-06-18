@@ -105,6 +105,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    animation: floatCard 4s ease-in-out infinite alternate;
 }
 
 .floating-card-1 {
@@ -115,6 +116,7 @@
 .floating-card-2 {
     bottom: 60px;
     right: -20px;
+    animation-delay: 2s;
 }
 
 .icon-circle {
@@ -630,6 +632,7 @@
 .btn-cam-select.active .cam-dot {
     background-color: var(--success);
     box-shadow: 0 0 8px var(--success);
+    animation: pulse 1.5s infinite;
 }
 
 .live-cam-feed-container {
@@ -676,6 +679,7 @@
     border-radius: 50%;
     background-color: #FF0000;
     box-shadow: 0 0 8px #FF0000;
+    animation: pulse 1s infinite alternate;
 }
 
 .live-cam-feed {
@@ -685,6 +689,21 @@
     background-position: center;
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
+}
+
+.live-cam-feed[data-cam-bg="recreacao"] {
+    background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80');
+    animation: cctvPan1 20s linear infinite alternate;
+}
+
+.live-cam-feed[data-cam-bg="banho"] {
+    background-image: url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1200&q=80');
+    animation: cctvPan2 20s linear infinite alternate;
+}
+
+.live-cam-feed[data-cam-bg="hotel"] {
+    background-image: url('https://images.unsplash.com/photo-1541599540903-216a46ca1ad0?auto=format&fit=crop&w=1200&q=80');
+    animation: cctvPan3 20s linear infinite alternate;
 }
 
 .scanlines {
@@ -767,6 +786,7 @@
     align-items: center;
     gap: 12px;
     transform: translateX(120%);
+    animation: toastIn 0.3s ease forwards;
     position: relative;
     overflow: hidden;
 }
@@ -819,6 +839,7 @@
     height: 100%;
     background-color: var(--primary);
     width: 100%;
+    animation: toastProgress 4s linear forwards;
 }
 
 .toast-success .toast-progress-bar {
@@ -833,7 +854,21 @@
     background-color: var(--accent);
 }
 
-/* 13. RESPONSIVE COMPONENT ADJUSTMENTS */
+/* 13. CALCULATOR HOVER MICRO-INTERACTIONS */
+.radio-tile:hover, .size-box:hover, .freq-box:hover {
+    border-color: rgba(99, 102, 241, 0.45);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.12);
+}
+
+[data-theme="dark"] .radio-tile:hover, 
+[data-theme="dark"] .size-box:hover, 
+[data-theme="dark"] .freq-box:hover {
+    border-color: rgba(129, 140, 248, 0.4);
+    box-shadow: 0 8px 20px rgba(129, 140, 248, 0.08);
+}
+
+/* 14. RESPONSIVE COMPONENT ADJUSTMENTS */
 @media (max-width: 768px) {
     .live-cam-layout {
         grid-template-columns: 1fr;
