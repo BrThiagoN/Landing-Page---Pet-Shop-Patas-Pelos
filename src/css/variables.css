@@ -1,0 +1,78 @@
+/* ==========================================================================
+   DESIGN SYSTEM & VARIABLES (VARIABLES.CSS)
+   ========================================================================== */
+:root {
+    --bg-primary: #FAF8F5;
+    --bg-secondary: #FFFFFF;
+    --bg-dark: #1E1C31;
+    --bg-card-dark: #2A2744;
+    --text-primary: #2C2A29;
+    --text-secondary: #6B6661;
+    --text-light: #F4F0EB;
+    
+    --primary: #6366F1;         /* Indigo */
+    --primary-hover: #4F46E5;
+    --primary-light: #EEF2FF;
+    --secondary: #EC4899;       /* Rose */
+    --secondary-hover: #DB2777;
+    --accent: #F59E0B;          /* Amber */
+    --accent-light: #FEF3C7;
+    --success: #10B981;         /* Emerald */
+    --success-light: #D1FAE5;
+    
+    --border-color: #EAE3DA;
+    --border-focus: #A5B4FC;
+    
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
+    
+    --shadow-sm: 0 4px 16px rgba(44, 42, 41, 0.10);
+    --shadow-md: 0 12px 30px rgba(99, 102, 241, 0.12);
+    --shadow-lg: 0 24px 50px rgba(44, 42, 41, 0.16);
+    
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --header-bg: rgba(250, 248, 245, 0.85);
+    --header-border: rgba(234, 227, 218, 0.5);
+    --header-shadow: var(--shadow-sm);
+    --bg-tinted: rgba(238, 242, 255, 0.35);
+}
+
+/* ==========================================================================
+   DARK THEME VARIABLES
+   ========================================================================== */
+[data-theme="dark"] {
+    --bg-primary: #0F0D1A;      /* Rich dark violet */
+    --bg-secondary: #161426;    /* Dark violet card background */
+    --bg-dark: #08070F;
+    --bg-card-dark: #1E1B33;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A09BB9;  /* Cooler text */
+    --text-light: #FAF8F5;
+    
+    --primary: #818CF8;         /* Vibrant indigo */
+    --primary-hover: #6366F1;
+    --primary-light: rgba(129, 140, 248, 0.15);
+    
+    --secondary: #F472B6;       /* Hot Pink for dark mode */
+    --secondary-hover: #EC4899;
+    
+    --border-color: #262438;
+    --border-focus: #818CF8;
+    --success-light: rgba(16, 185, 129, 0.15);
+    --accent-light: rgba(245, 158, 11, 0.15);
+    
+    --header-bg: rgba(15, 13, 26, 0.8);
+    --header-border: rgba(129, 140, 248, 0.2);
+    --header-shadow: 0 10px 30px rgba(129, 140, 248, 0.08);
+    --bg-tinted: #0A0912;
+}
+
+[data-theme="dark"] .floating-card {
+    background-color: rgba(22, 20, 38, 0.9);
+    border-color: rgba(255, 255, 255, 0.08);
+}

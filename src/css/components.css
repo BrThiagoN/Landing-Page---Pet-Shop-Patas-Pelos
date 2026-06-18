@@ -1,0 +1,877 @@
+/* ==========================================================================
+   UI COMPONENTS (COMPONENTS.CSS)
+   ========================================================================== */
+
+/* 1. BUTTONS */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+}
+
+.btn-lg {
+    padding: 16px 36px;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    display: flex;
+    width: 100%;
+}
+
+/* 2. THEME TOGGLE BUTTON */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.35rem;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* 3. FLOATING CARD COMPONENT */
+.floating-card {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.floating-card-1 {
+    top: 60px;
+    left: -40px;
+}
+
+.floating-card-2 {
+    bottom: 60px;
+    right: -20px;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.floating-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.floating-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* 4. MODALS & DIALOGS */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 28, 49, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transform: scale(0.9);
+    transition: var(--transition-smooth);
+}
+
+.modal-overlay.open .modal-card {
+    transform: scale(1);
+}
+
+.modal-icon {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+}
+
+.modal-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.modal-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.modal-card strong {
+    color: var(--text-primary);
+}
+
+.modal-card .btn {
+    margin-top: 16px;
+}
+
+.modal-card-lg {
+    max-width: 900px;
+    width: 95%;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    z-index: 2010;
+    transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+/* 5. GENERAL FORM CONTROLS */
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* 6. RADIO TILES (PET TYPE SELECTOR) */
+.radio-tile-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.radio-tile-label {
+    cursor: pointer;
+    display: block;
+}
+
+.radio-tile-input {
+    display: none;
+}
+
+.radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.radio-tile-icon {
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+.radio-tile-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.radio-tile-input:checked + .radio-tile {
+    background-color: rgba(99, 102, 241, 0.15);
+    border-color: var(--primary);
+}
+
+.radio-tile-input:checked + .radio-tile .radio-tile-text {
+    color: #FFFFFF;
+}
+
+/* 7. SIZE SELECTOR OPTIONS */
+.size-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.size-option {
+    cursor: pointer;
+}
+
+.size-input {
+    display: none;
+}
+
+.size-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition-smooth);
+}
+
+.size-box small {
+    font-weight: normal;
+    opacity: 0.6;
+}
+
+.size-input:checked + .size-box {
+    background-color: rgba(99, 102, 241, 0.15);
+    border-color: var(--primary);
+    color: #FFFFFF;
+}
+
+/* 8. CHECKBOX LIST ITEMS */
+.services-checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.checkbox-item:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-control {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+}
+
+.checkbox-input:checked ~ .checkbox-control {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.checkbox-control::after {
+    content: '';
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+    margin-bottom: 2px;
+}
+
+.checkbox-input:checked ~ .checkbox-control::after {
+    display: block;
+}
+
+.checkbox-label-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 500;
+}
+
+.price-val {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* 9. FREQUENCY SELECTION TABS */
+.frequency-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.freq-option {
+    cursor: pointer;
+}
+
+.freq-input {
+    display: none;
+}
+
+.freq-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition-smooth);
+}
+
+.freq-box small {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.freq-input:checked + .freq-box {
+    background-color: rgba(99, 102, 241, 0.1);
+    border-color: var(--primary);
+    color: #FFFFFF;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+/* 10. FAQ ACCORDION COMPONENT */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.faq-item:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    transition: var(--transition-smooth);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 24px;
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-bottom: 24px;
+}
+
+.faq-item.active {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-item.active .faq-question {
+    color: var(--primary-hover);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    color: var(--secondary);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 24px;
+}
+
+/* 11. LIVE CAMERA DISPLAY SIMULATOR */
+.live-cam-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    height: 500px;
+}
+
+.live-cam-sidebar {
+    background-color: var(--bg-dark);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-right: 1px solid var(--border-color);
+}
+
+.live-cam-sidebar h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+.btn-cam-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition-smooth);
+}
+
+.btn-cam-select:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+}
+
+.btn-cam-select.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
+}
+
+.cam-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #6B7280;
+}
+
+.btn-cam-select.active .cam-dot {
+    background-color: var(--success);
+    box-shadow: 0 0 8px var(--success);
+}
+
+.live-cam-feed-container {
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cctv-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    color: #00FF00;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.cctv-overlay-indicator {
+    position: absolute;
+    top: 48px;
+    left: 20px;
+    z-index: 10;
+    font-family: monospace;
+    color: #FF0000;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rec-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    box-shadow: 0 0 8px #FF0000;
+}
+
+.live-cam-feed {
+    flex-grow: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.25) 50%
+    ), linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.06),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.06)
+    );
+    background-size: 100% 4px, 6px 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.cctv-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 30px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    z-index: 6;
+}
+
+.cctv-lens-zoom {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #00FF00;
+    border-left: 2px solid #00FF00;
+    top: 40px;
+    left: 40px;
+    pointer-events: none;
+    z-index: 7;
+}
+
+.cctv-lens-zoom::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid #00FF00;
+    border-right: 2px solid #00FF00;
+    right: -280px;
+    bottom: -180px;
+}
+
+/* 12. TOAST NOTIFICATION SYSTEM */
+.toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 380px;
+    width: 90%;
+}
+
+.toast {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    border-left: 6px solid var(--primary);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    transform: translateX(120%);
+    position: relative;
+    overflow: hidden;
+}
+
+.toast.toast-success {
+    border-left-color: var(--success);
+}
+
+.toast.toast-error {
+    border-left-color: var(--secondary);
+}
+
+.toast.toast-info {
+    border-left-color: var(--accent);
+}
+
+.toast-content {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+}
+
+.toast-close:hover {
+    color: var(--text-primary);
+}
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+[data-theme="dark"] .toast-progress {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toast-progress-bar {
+    height: 100%;
+    background-color: var(--primary);
+    width: 100%;
+}
+
+.toast-success .toast-progress-bar {
+    background-color: var(--success);
+}
+
+.toast-error .toast-progress-bar {
+    background-color: var(--secondary);
+}
+
+.toast-info .toast-progress-bar {
+    background-color: var(--accent);
+}
+
+/* 13. RESPONSIVE COMPONENT ADJUSTMENTS */
+@media (max-width: 768px) {
+    .live-cam-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        height: 450px;
+    }
+    .live-cam-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 12px;
+        gap: 8px;
+    }
+    .live-cam-sidebar h3 {
+        display: none;
+    }
+    .btn-cam-select {
+        white-space: nowrap;
+        padding: 8px 12px;
+    }
+    .cctv-header {
+        font-size: 0.75rem;
+    }
+    .cctv-overlay-indicator {
+        top: 40px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .frequency-selector {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .toast-container {
+        top: auto;
+        bottom: 24px;
+        right: 5%;
+        left: 5%;
+        width: 90%;
+    }
+}
